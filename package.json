@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.2.0"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-backend-cpu": "^3.21.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.21.0"
+  }
+}
