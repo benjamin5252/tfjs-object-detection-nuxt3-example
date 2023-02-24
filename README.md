@@ -1,55 +1,13 @@
-# tfjs-object-detection-nuxt3-example
-
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-[Nuxt3 Tutorial] How to perform coco-ssd object detection powered by tensorflow.js in a Nuxt 3 app.
-
-Intro
+## [Nuxt3 Tutorial] How to perform coco-ssd object detection powered by tensorflow.js in a Nuxt 3 app.
+![image](https://user-images.githubusercontent.com/31298786/221101709-1413ab14-61d6-42c8-a9e3-58d9471f8a02.png)
+# Intro
 In this project, a simple example of using the pre-trained object detection model (coco-ssd) powered by tensorflow.js in a Nuxt 3 app is built.
 
 Github Repo of the source code of this project:
 
 https://github.com/benjamin5252/tfjs-object-detection-nuxt3-example
 
-Create Nuxt app
+# Create Nuxt app
 Create one Nuxt 3 app according to the Installation instruction reference down below.
 
 Reference:
@@ -58,7 +16,7 @@ Installation
 Get started with Nuxt quickly with our online starters or start locally with your terminal. You can start playing with…
 nuxt.com
 
-Install dependencies
+# Install dependencies
 Reference:
 
 https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
@@ -87,24 +45,26 @@ package.json
 }
 ```
 After editing the package.json perform the following command to install the dependencies
-
+```bash
 npm install
+```
 Replace the <NuxtWelcome /> in “app.vue” with “<NuxtPage />” like below.
-
+```html
 <template>
   <div>
     <NuxtPage />
   </div>
 </template>
+```
 Make a “pages” folder in our project and put “index.vue” for our main page. Then the nuxt app is setup for our project. The following part of the project will performed on this “index.vue” page.
 
 
-Use tensorflow.js coco-ssd object detection in the Nuxt app
+# Use tensorflow.js coco-ssd object detection in the Nuxt app
 Add some UI to read images and a canvas to show the detection result in index.vue page. (I added the code in my “index.vue” page)
 
 index.vue
 
-
+```html
 <template>
     <div>
         <div v-if="isLoadingModel">Loading Model ...</div>
@@ -121,9 +81,10 @@ index.vue
 </script>
 <style>
 </style>
+```
 Import the modules with the code below in the top part of your Vue component <script setup> section.
 
-
+```html
 <template>
     <div>
         <div v-if="isLoadingModel">Loading Model ...</div>
@@ -145,8 +106,9 @@ Import the modules with the code below in the top part of your Vue component <sc
 </script>
 <style>
 </style>
+```
 Create some variables for page interaction and data store.
-
+```html
 <template>
     <div>
         <div v-if="isLoadingModel">Loading Model ...</div>
@@ -170,8 +132,9 @@ Create some variables for page interaction and data store.
 </script>
 <style>
 </style>
+ ```
 Load the ai model with “cocoSsd.load()” in the code beload when the page is mounted.
-
+```html
 <template>
     <div>
         <div v-if="isLoadingModel">Loading Model ...</div>
@@ -202,11 +165,12 @@ Load the ai model with “cocoSsd.load()” in the code beload when the page is 
 </script>
 <style>
 </style>
+```
 Get detection by passing the “img” element in to the “cocoSsdModel.detect(img)” function to get the detection result. The function to draw the detection result on to the canvas is show as “getDetect()” function below. And a “getChange()” is added to get the file input and pass the img to “getDetect(img)” after the img is loaded. The code is completed in this project down below.
 
 index.vue (complete)
 
-
+```html
 <template>
     <div>
         <div v-if="isLoadingModel">Loading Model ...</div>
@@ -219,7 +183,6 @@ index.vue (complete)
 
     </div>
 </template>
-
 <script setup>
 // import modules for object detection
 import '@tensorflow/tfjs-backend-cpu'
@@ -279,10 +242,56 @@ const getDetect = async (img) => {
 
 <style>
 </style>
-Result:
+ ```
+# Result:
 Run the dev comment to show the outcome.
-
+```bash
 npm run dev
+```
 The web page interaction will be like below.
+![image](https://user-images.githubusercontent.com/31298786/221101709-1413ab14-61d6-42c8-a9e3-58d9471f8a02.png)
 
+
+
+# tfjs-object-detection-nuxt3-example
+
+
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
