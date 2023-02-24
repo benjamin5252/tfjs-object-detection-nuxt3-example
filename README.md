@@ -1,5 +1,7 @@
 ## [Nuxt3 Tutorial] How to perform coco-ssd object detection powered by tensorflow.js in a Nuxt 3 app.
+
 (The better version of the tutorial can be seen on my medium)
+
 https://medium.com/@yinte1222/nuxt3-tutorial-how-to-perform-coco-ssd-object-detection-powered-by-tensorflow-js-in-a-nuxt-3-app-6e505323481
 
 ![image](https://user-images.githubusercontent.com/31298786/221101906-e52d7758-1500-42e4-b2ff-4b8052471d33.png)
