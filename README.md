@@ -66,7 +66,7 @@ https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd
 According to the GitHub repo of the coco-ssd object detection pre-trained model, we have to install the following dependency “@tensorflow/tfjs-backend-cpu”, “@tensorflow/tfjs-backend-webgl”, and “@tensorflow-models/coco-ssd”. I found the latest version of “@tensorflow-models/coco-ssd” is not compatible with the latest version of the other two dependencies. The package.json is listed below. We can edited the package.json like below and perform “npm install”.
 
 package.json
-
+```json
 {
   "private": true,
   "scripts": {
@@ -85,6 +85,7 @@ package.json
     "@tensorflow/tfjs-backend-webgl": "^3.21.0"
   }
 }
+```
 After editing the package.json perform the following command to install the dependencies
 
 npm install
